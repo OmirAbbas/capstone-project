@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: test
-        run: echo ${{github.ref_name}}
+        run: echo ${{ github.event_name}}
       - name: deploy to ${{ matrix.nodes }}
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
